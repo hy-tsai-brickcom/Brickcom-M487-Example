@@ -82,8 +82,8 @@ In the following, we take [NuMaker-IoT-M487](https://os.mbed.com/platforms/NUMAK
 
 1.  Clone the example and navigate into it
     ```sh
-    $ git clone https://github.com/OpenNuvoton/NuMaker-mbed-Azure-IoT-CSDK-PnP-example
-    $ cd NuMaker-mbed-Azure-IoT-CSDK-PnP-example
+    $ git clone https://github.com/hy-tsai-brickcom/Brickcom-M487-Example
+    $ cd Brickcom-M487-Example
     ```
 
 1.  Deploy necessary libraries
