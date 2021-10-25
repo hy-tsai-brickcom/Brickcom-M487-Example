@@ -1,6 +1,6 @@
-# Example for Azure IoT Plug and Play on Nuvoton's Mbed Enabled boards
+# Example for Azure IoT Plug and Play on Brickcom-M487-Example development boards
 
-This is an example to show [Azure IoT Plug and Play](https://docs.microsoft.com/en-us/azure/iot-pnp/) on Nuvoton's Mbed Enabled boards.
+This is an example to show [Azure IoT Plug and Play](https://docs.microsoft.com/en-us/azure/iot-pnp/) on Brickcom-M487-Example development board.
 It relies on the following modules:
 
 -   [Mbed OS](https://github.com/ARMmbed/mbed-os)
@@ -39,7 +39,7 @@ This section is intended for developers to get started, import the example appli
 
 ### Hardware requirements
 
--   Nuvoton's Mbed Enabled board
+-   Brickcom-M487-Example development board
 
 ### Software requirements
 
@@ -118,8 +118,8 @@ In the following, we take [NuMaker-IoT-M487](https://os.mbed.com/platforms/NUMAK
                 "value": "\"SYMMETRIC_KEY\""
             },
             "provision_endpoint": {
-                    "help": "Device provisioning service URI",
-            "value": "\"global.azure-devices-provisioning.net\""
+                "help": "Device provisioning service URI",
+                "value": "\"global.azure-devices-provisioning.net\""
             },
             "provision_id_scope": {
                 "help": "Device provisioning service ID scope",
@@ -184,28 +184,26 @@ Configure host terminal program with **115200/8-N-1**, and you should see log si
 
 ```
 Info: Connecting to the network
-Info: Connection success, MAC: a4:cf:12:b7:82:3b
+Info: Connection success, MAC: a4:cf:12:b7:ec:3c
 Info: Getting time from the NTP server
-Info: Time: Thu Nov26 3:54:25 2020
+Info: Time: Mon Oct 25 6:55:50 2021
 
-Info: RTC reports Thu Nov26 3:54:25 2020
+Info: RTC reports Mon Oct 25 6:55:50 2021
 
 Info: Initiating DPS client to retrieve IoT Hub connection information
-Info: Provisioning callback indicates success.  iothubUri=nuvoton-test-001.azure-devices.net, deviceId=my-dps-symm-device-001
+Info: Provisioning callback indicates success.  iothubUri=certsvc-hub-prod-japaneast.azure-devices.net, deviceId=14f42a58-7eb4-4d83-a727-70e578febfe5
 Info: DPS successfully registered.  Continuing on to creation of IoTHub device client handle.
 Info: Successfully created device client.  Hit Control-C to exit program
 
-Info: Sending serialNumber property to IoTHub
-Info: Sending device information property to IoTHub.  propertyName=swVersion, propertyValue="1.0.0.0"
-Info: Sending device information property to IoTHub.  propertyName=manufacturer, propertyValue="Sample-Manufacturer"
-Info: Sending device information property to IoTHub.  propertyName=model, propertyValue="sample-Model-123"
-Info: Sending device information property to IoTHub.  propertyName=osName, propertyValue="sample-OperatingSystem-name"
-Info: Sending device information property to IoTHub.  propertyName=processorArchitecture, propertyValue="Contoso-Arch-64bit"
-Info: Sending device information property to IoTHub.  propertyName=processorManufacturer, propertyValue="Processor Manufacturer(TM)"
-Info: Sending device information property to IoTHub.  propertyName=totalStorage, propertyValue=10000
-Info: Sending device information property to IoTHub.  propertyName=totalMemory, propertyValue=200
-Info: Sending maximumTemperatureSinceLastReboot property to IoTHub for component=thermostat1
-Info: Sending maximumTemperatureSinceLastReboot property to IoTHub for component=thermostat2
+Info: Sending device information property to IoTHub.  propertyName=swVersion, propertyValue="0.0.0.1"
+Info: Sending device information property to IoTHub.  propertyName=manufacturer, propertyValue="Nuvoton"
+Info: Sending device information property to IoTHub.  propertyName=model, propertyValue="Brickcom IoT M487 Dev"
+Info: Sending device information property to IoTHub.  propertyName=osName, propertyValue="Mbed OS"
+Info: Sending device information property to IoTHub.  propertyName=processorArchitecture, propertyValue="Cortex-M4"
+Info: Sending device information property to IoTHub.  propertyName=processorManufacturer, propertyValue="Brickcom"
+Info: Sending device information property to IoTHub.  propertyName=totalStorage, propertyValue=512
+Info: Sending device information property to IoTHub.  propertyName=totalMemory, propertyValue=160
+Info: Sending led property to IoTHub
 ```
 
 Follow [Use Azure IoT Explorer](https://docs.microsoft.com/en-us/azure/iot-pnp/howto-use-iot-explorer#use-azure-iot-explorer) to connect to your IoT Hub and interact with your device.
@@ -215,11 +213,11 @@ For example, go to the path in Azure IoT Explorer:
 Home > MY_IOT_HUB > Devices > MY_DEVICE > IoT Plug and Play components > DEFAULT_COMPONENT > Commands
 ```
 
-Issue the command `reboot` with 5s delay, and you should see:
+Issue the command `reboot` with 1s delay, and you should see:
 
 ```
 Info: Received PnP command for TemperatureController component, command=reboot
-Info: Temperature controller 'reboot' command invoked with delay=5 seconds
+Info: Temperature controller 'reboot' command invoked with delay=1 seconds
 ```
 
 ### Walk through source code
