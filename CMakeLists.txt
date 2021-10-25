@@ -24,6 +24,7 @@ target_include_directories(${APP_TARGET}
         .
         pnp/common
         pnp/pnp_temperature_controller
+        drivers/sensor/COMPONENT_BMX055
 )
 
 target_sources(${APP_TARGET}
@@ -32,9 +33,10 @@ target_sources(${APP_TARGET}
         pnp/common/pnp_device_client_ll.c
         pnp/common/pnp_dps_ll.c
         pnp/common/pnp_protocol.c
-        pnp/pnp_temperature_controller/pnp_deviceinfo_component.c
-        pnp/pnp_temperature_controller/pnp_temperature_controller.cpp
-        pnp/pnp_temperature_controller/pnp_thermostat_component.c
+        pnp/pnp_numaker_iot_m487_dev/pnp_deviceinfo_component.cpp
+        pnp/pnp_numaker_iot_m487_dev/pnp_motion_sensor_bmx055_component.cpp
+        pnp/pnp_numaker_iot_m487_dev/pnp_numaker_iot_m487_dev.cpp
+        drivers/sensor/COMPONENT_BMX055/BMX055.cpp
 )
 
 if("NUVOTON" IN_LIST MBED_TARGET_LABELS)
