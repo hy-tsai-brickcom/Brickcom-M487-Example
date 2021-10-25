@@ -1,4 +1,4 @@
-# Example for Azure IoT Plug and Play on Brickcom-M487-Example development boards
+# Example for Azure IoT Plug and Play on Brickcom-M487-Example development board
 
 This is an example to show [Azure IoT Plug and Play](https://docs.microsoft.com/en-us/azure/iot-pnp/) on Brickcom-M487-Example development board.
 It relies on the following modules:
@@ -10,8 +10,9 @@ It relies on the following modules:
     -   Other dependency libraries
 -   [NTP client library](https://github.com/ARMmbed/ntp-client)
 
-This example is port of [Azure IoT Plug and Play Temperature Controller sample](https://github.com/Azure/azure-iot-sdk-c/tree/master/iothub_client/samples/pnp/pnp_temperature_controller),
-which implements the model [dtmi:com:example:TemperatureController;1](https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v2/samples/TemperatureController.json).
+Refering to [Azure IoT Plug and Play Temperature Controller sample](https://github.com/Azure/azure-iot-sdk-c/tree/master/iothub_client/samples/pnp/pnp_temperature_controller),
+this example implements the model [dtmi:nuvoton:numaker_iot_m487_dev-1.json;1](https://github.com/Azure/iot-plugandplay-models/blob/main/dtmi/brickcom/brickcom_m487_dev-1.json)
+on Brickcom-M487-Example development board.
 
 For connection with Azure IoT Hub, it supports two authentication types.
 Check [below](#compile-with-mbed-cli) for their respective configuration.
