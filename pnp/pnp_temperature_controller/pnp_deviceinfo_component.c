@@ -16,29 +16,29 @@
 #define PNP_ENCODE_STRING_FOR_JSON(str) #str
 
 static const char PnPDeviceInfo_SoftwareVersionPropertyName[] = "swVersion";
-static const char PnPDeviceInfo_SoftwareVersionPropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("1.0.0.0");
+static const char PnPDeviceInfo_SoftwareVersionPropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("0.0.0.1");
 
 static const char PnPDeviceInfo_ManufacturerPropertyName[] = "manufacturer";
-static const char PnPDeviceInfo_ManufacturerPropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("Sample-Manufacturer");
+static const char PnPDeviceInfo_ManufacturerPropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("Nuvoton");
 
 static const char PnPDeviceInfo_ModelPropertyName[] = "model";
-static const char PnPDeviceInfo_ModelPropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("sample-Model-123");
+static const char PnPDeviceInfo_ModelPropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("Brickcom IoT M487 Dev");
 
 static const char PnPDeviceInfo_OsNamePropertyName[] = "osName";
-static const char PnPDeviceInfo_OsNamePropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("sample-OperatingSystem-name");
+static const char PnPDeviceInfo_OsNamePropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("Mbed OS");
 
 static const char PnPDeviceInfo_ProcessorArchitecturePropertyName[] = "processorArchitecture";
-static const char PnPDeviceInfo_ProcessorArchitecturePropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("Contoso-Arch-64bit");
+static const char PnPDeviceInfo_ProcessorArchitecturePropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("Cortex-M4");
 
 static const char PnPDeviceInfo_ProcessorManufacturerPropertyName[] = "processorManufacturer";
-static const char PnPDeviceInfo_ProcessorManufacturerPropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("Processor Manufacturer(TM)");
+static const char PnPDeviceInfo_ProcessorManufacturerPropertyValue[] = PNP_ENCODE_STRING_FOR_JSON("Brickcom");
 
 // The storage and memory fields below are doubles.  They should NOT be escaped since they will be legal JSON values when output.
 static const char PnPDeviceInfo_TotalStoragePropertyName[] = "totalStorage";
-static const char PnPDeviceInfo_TotalStoragePropertyValue[] = "10000";
+static const char PnPDeviceInfo_TotalStoragePropertyValue[] = "512";
 
 static const char PnPDeviceInfo_TotalMemoryPropertyName[] = "totalMemory";
-static const char PnPDeviceInfo_TotalMemoryPropertyValue[] = "200";
+static const char PnPDeviceInfo_TotalMemoryPropertyValue[] = "160";
 
 //
 // SendReportedPropertyForDeviceInformation sends a property as part of DeviceInfo component.
